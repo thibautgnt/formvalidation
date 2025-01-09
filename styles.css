@@ -46,6 +46,16 @@ label {
     font-size: 0.95rem;
     margin-bottom: 0.3rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+label i {
+    color: #4299e1;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
 }
 
 .input-icon-wrapper {
