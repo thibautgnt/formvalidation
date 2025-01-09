@@ -13,17 +13,22 @@
             <div class="input-group">
                 <label for="first_name">Prénom</label>
                 <input type="text" id="first_name" placeholder="Entrez votre prénom" />
-                <span id="error_name">Veuillez entrer votre prénom</span>
+                <span id="error_name" class="error-message">Veuillez entrer votre prénom</span>
             </div>
 
             <div class="input-group">
                 <label for="last_name">Nom</label>
                 <input type="text" id="last_name" placeholder="Entrez votre nom" />
+                <span id="error_lastname" class="error-message">Veuillez entrer votre nom</span>
             </div>
 
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Entrez votre adresse email" />
+                <div class="email-input-container">
+                    <input type="email" id="email" placeholder="Entrez votre adresse email" autocomplete="off" />
+                    <div id="email-suggestions" class="email-suggestions"></div>
+                </div>
+                <span id="error_email" class="error-message">Veuillez entrer une adresse email valide</span>
             </div>
 
             <button type="submit">Créer le compte</button>

@@ -77,11 +77,32 @@ button:active {
     transform: translateY(1px);
 }
 
-span {
+.error-message {
     color: #e53e3e;
     font-size: 0.875rem;
     display: none;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+    transition: all 0.3s ease;
+}
+
+.error-message.visible {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .error {
@@ -96,4 +117,39 @@ span {
 .input-group {
     display: flex;
     flex-direction: column;
+}
+
+.email-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.email-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.email-suggestion {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.email-suggestion:hover {
+    background-color: #f7fafc;
+}
+
+.email-suggestion.selected {
+    background-color: #ebf8ff;
 }
