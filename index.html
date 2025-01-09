@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulaire d'Inscription</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <form id="mon_form">
+            <h2>Créer votre compte</h2>
+            
+            <div class="input-group">
+                <label for="first_name">Prénom</label>
+                <input type="text" id="first_name" placeholder="Entrez votre prénom" />
+                <span id="error_name">Veuillez entrer votre prénom</span>
+            </div>
+
+            <div class="input-group">
+                <label for="last_name">Nom</label>
+                <input type="text" id="last_name" placeholder="Entrez votre nom" />
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrez votre adresse email" />
+            </div>
+
+            <button type="submit">Créer le compte</button>
+        </form>
+        <script src="./script.js"></script>
+    </body>
+</html>
